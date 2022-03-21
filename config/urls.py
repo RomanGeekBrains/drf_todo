@@ -20,5 +20,6 @@ from users.views import SinUpView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', SinUpView.as_view(), name='signup'),
-    path('api/v1/', include('todo.urls'))
+    path('api/v1/', include('todo.urls')),
+    path('api-auth/', include('rest_framework.urls'))
 ]
